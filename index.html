@@ -1,150 +1,179 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="TOPSCOL'AIR — Soutien scolaire en maths : cours, stages intensifs et ressources pour élèves. Réservez votre bilan gratuit." />
     <title>TOPSCOL'AIR | Soutien Scolaire d'Excellence</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Open Graph (social preview) -->
+    <meta property="og:title" content="TOPSCOL'AIR | Soutien Scolaire d'Excellence" />
+    <meta property="og:description" content="Propulsez vos résultats en Maths — bilan gratuit, cours à domicile, stages intensifs et espace élèves." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://topscolair.github.io/Topscolair/" />
+
+    <!-- Fonts & icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Tailwind CDN for development; for production precompile your CSS instead -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         body { font-family: 'Roboto', sans-serif; }
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        h1,h2,h3 { font-family: 'Montserrat', sans-serif; }
         .gradient-blue { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        /* Small helper for visually-hidden but focusable skip link */
+        .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+        .skip-link:focus { left: 1rem; top: 1rem; width: auto; height: auto; padding: .5rem 1rem; background: white; color: #1e3a8a; border-radius: .25rem; z-index: 9999; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <a href="#main" class="skip-link">Passer au contenu</a>
+
+    <!-- Header / Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Navigation principale">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-blue-900 tracking-tighter">
-                <i class="fas fa-plane-up mr-2"></i>TOPSCOL'AIR
+            <div class="text-2xl font-bold text-blue-900 tracking-tighter flex items-center">
+                <i class="fas fa-plane-up mr-2" aria-hidden="true"></i>
+                <span>TOPSCOL'AIR</span>
             </div>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#tarifs" class="hover:text-blue-600">Tarifs</a>
-                <a href="#stages" class="hover:text-blue-600">Stages</a>
-                <a href="#eleves" class="hover:text-blue-600">Espace Élèves</a>
-                <a href="#contact" class="bg-blue-900 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">S'inscrire</a>
+
+            <div class="hidden md:flex space-x-8 font-medium" role="menubar" aria-label="Menu">
+                <a href="#tarifs" class="hover:text-blue-600" role="menuitem">Tarifs</a>
+                <a href="#stages" class="hover:text-blue-600" role="menuitem">Stages</a>
+                <a href="#eleves" class="hover:text-blue-600" role="menuitem">Espace Élèves</a>
+                <a href="#contact" class="bg-blue-900 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition" role="menuitem">S'inscrire</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="gradient-blue text-white py-20 px-6">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 uppercase tracking-tight">Propulsez vos résultats en Maths</h1>
-            <p class="text-xl md:text-2xl mb-10 opacity-90 font-light">La rigueur d'un pilote au service de la réussite scolaire.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-white text-blue-900 font-bold px-8 py-4 rounded-lg shadow-xl hover:bg-gray-100 transition text-lg">Réserver un bilan gratuit</a>
-                <a href="#tarifs" class="border-2 border-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition text-lg text-white">Voir les tarifs</a>
-            </div>
-        </div>
-    </header>
+    <main id="main" tabindex="-1">
 
-    <!-- Argumentaire -->
-    <section class="py-16 container mx-auto px-6">
-        <div class="grid md:grid-cols-3 gap-12 text-center">
-            <div>
-                <i class="fas fa-microchip text-4xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Expertise Logique</h3>
-                <p class="text-gray-600">Niveau Licence (DEUG MIAS) & 10 ans d'expérience pour une compréhension profonde des concepts.</p>
+        <!-- Hero Section -->
+        <header class="gradient-blue text-white py-20 px-6">
+            <div class="container mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 uppercase tracking-tight">Propulsez vos résultats en Maths</h1>
+                <p class="text-xl md:text-2xl mb-10 opacity-90 font-light">La rigueur d'un pilote au service de la réussite scolaire.</p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-white text-blue-900 font-bold px-8 py-4 rounded-lg shadow-xl hover:bg-gray-100 transition text-lg">Réserver un bilan gratuit</a>
+                    <a href="#tarifs" class="border-2 border-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition text-lg">Voir les tarifs</a>
+                </div>
             </div>
-            <div>
-                <i class="fas fa-bullseye text-4xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Méthode "Cockpit"</h3>
-                <p class="text-gray-600">Rigueur chirurgicale, check-lists de révision et gestion du stress pour les examens.</p>
-            </div>
-            <div>
-                <i class="fas fa-hand-holding-dollar text-4xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Avantage Fiscal</h3>
-                <p class="text-gray-600">Professeur agréé SAP : bénéficiez de 50% de crédit d'impôt immédiat sur tous les cours.</p>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Tarifs -->
-    <section id="tarifs" class="bg-gray-100 py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16">Cours à domicile</h2>
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Collège -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Collège</h3>
-                    <p class="text-gray-500 mb-6 italic">Toutes matières (Maths, Français, Anglais...)</p>
-                    <div class="text-4xl font-bold mb-2">30€ <span class="text-lg font-normal text-gray-400">/heure</span></div>
-                    <div class="bg-green-100 text-green-700 font-bold p-3 rounded-lg mb-6 text-center text-sm">
-                        Coût réel : 15€ / h après crédit d'impôt
+        <!-- Argumentaire -->
+        <section class="py-16 container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div>
+                    <i class="fas fa-microchip text-4xl text-blue-600 mb-4" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mb-2">Expertise Logique</h3>
+                    <p class="text-gray-600">Niveau Licence (DEUG MIAS) & 10 ans d'expérience pour une compréhension profonde des concepts.</p>
+                </div>
+                <div>
+                    <i class="fas fa-bullseye text-4xl text-blue-600 mb-4" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mb-2">Méthode "Cockpit"</h3>
+                    <p class="text-gray-600">Rigueur chirurgicale, check-lists de révision et gestion du stress pour les examens.</p>
+                </div>
+                <div>
+                    <i class="fas fa-hand-holding-dollar text-4xl text-blue-600 mb-4" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mb-2">Avantage Fiscal</h3>
+                    <p class="text-gray-600">Professeur agréé SAP : bénéficiez de 50% de crédit d'impôt immédiat sur tous les cours.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tarifs -->
+        <section id="tarifs" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-16">Cours à domicile</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Collège -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-900">Collège</h3>
+                        <p class="text-gray-500 mb-6 italic">Toutes matières (Maths, Français, Anglais...)</p>
+                        <div class="text-4xl font-bold mb-2">30€ <span class="text-lg font-normal text-gray-400">/heure</span></div>
+                        <div class="bg-green-100 text-green-700 font-bold p-3 rounded-lg mb-6 text-center text-sm">
+                            Coût réel : 15€ / h après crédit d'impôt
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li><i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>Remise à niveau</li>
+                            <li><i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>Aide aux devoirs</li>
+                            <li><i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>Méthodologie</li>
+                        </ul>
                     </div>
-                    <ul class="space-y-3 mb-8">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Remise à niveau</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Aide aux devoirs</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Méthodologie</li>
-                    </ul>
-                </div>
-                <!-- Lycée -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-900">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Lycée</h3>
-                    <p class="text-gray-500 mb-6 italic">Spécialités : Maths, Physique, Chimie</p>
-                    <div class="text-4xl font-bold mb-2">40€ <span class="text-lg font-normal text-gray-400">/heure</span></div>
-                    <div class="bg-green-100 text-green-700 font-bold p-3 rounded-lg mb-6 text-center text-sm">
-                        Coût réel : 20€ / h après crédit d'impôt
+                    <!-- Lycée -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-900">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-900">Lycée</h3>
+                        <p class="text-gray-500 mb-6 italic">Spécialités : Maths, Physique, Chimie</p>
+                        <div class="text-4xl font-bold mb-2">40€ <span class="text-lg font-normal text-gray-400">/heure</span></div>
+                        <div class="bg-green-100 text-green-700 font-bold p-3 rounded-lg mb-6 text-center text-sm">
+                            Coût réel : 20€ / h après crédit d'impôt
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li><i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>Expertise scientifique</li>
+                            <li><i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>Préparation BAC</li>
+                            <li><i class="fas fa-check text-green-500 mr-2" aria-hidden="true"></i>Annales & Exercices types</li>
+                        </ul>
                     </div>
-                    <ul class="space-y-3 mb-8">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Expertise scientifique</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Préparation BAC</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Annales & Exercices types</li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Stages -->
-    <section id="stages" class="py-20 bg-blue-900 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6">Stages Intensifs Vacances</h2>
-            <p class="mb-12 opacity-80 max-w-2xl mx-auto">Boostez votre niveau en une semaine (10 heures de cours ciblés) pendant les vacances scolaires.</p>
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-blue-900">
-                <div class="bg-white p-6 rounded-xl">
-                    <h4 class="font-bold text-xl mb-2">Objectif Brevet</h4>
-                    <div class="text-3xl font-bold mb-2 text-blue-600">200€ <span class="text-sm text-gray-400">(soit 100€ net)</span></div>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-2xl scale-105 border-2 border-blue-400">
-                    <h4 class="font-bold text-xl mb-2">Objectif Bac</h4>
-                    <div class="text-3xl font-bold mb-2 text-blue-600">300€ <span class="text-sm text-gray-400">(soit 150€ net)</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Espace Elèves -->
-    <section id="eleves" class="py-16 container mx-auto px-6 text-center">
-        <h2 class="text-2xl font-bold mb-4">Espace Élèves</h2>
-        <p class="text-gray-600 mb-8">Accédez aux fiches de révisions, exercices et corrigés personnalisés.</p>
-        <div class="max-w-md mx-auto bg-white p-6 border rounded-lg shadow-sm">
-            <p class="text-sm text-gray-400 mb-4 italic">Réservé aux inscrits TOPSCOL'AIR</p>
-            <a href="https://drive.google.com/drive/u/0/folders/TON_LIEN_GOOGLE_DRIVE" target="_blank" class="text-blue-600 font-bold underline hover:text-blue-800">Accéder au dossier de ressources</a>
-        </div>
-    </section>
-
-    <!-- Contact / Inscription -->
-    <section id="contact" class="py-20 bg-gray-50 border-t">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-10">Prêt pour le décollage ?</h2>
-            <div class="flex flex-col items-center gap-6">
-                <p class="text-lg">Contactez-moi pour un premier échange gratuit sur les besoins de votre enfant.</p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://wa.me/330601103249" class="bg-green-500 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-green-600 transition flex items-center" target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp mr-3 text-2xl"></i> Messagerie Parents (WhatsApp)
-                    </a>
-                    <a href="https://forms.gle/TON_FORM_ID" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-blue-700 transition flex items-center" target="_blank" rel="noopener">
-                        <i class="fas fa-file-signature mr-3"></i> Formulaire d'inscription
-                    </a>
+        <!-- Stages -->
+        <section id="stages" class="py-20 bg-blue-900 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-6">Stages Intensifs Vacances</h2>
+                <p class="mb-12 opacity-80 max-w-2xl mx-auto">Boostez votre niveau en une semaine (10 heures de cours ciblés) pendant les vacances scolaires.</p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-blue-900">
+                    <div class="bg-white p-6 rounded-xl">
+                        <h4 class="font-bold text-xl mb-2">Objectif Brevet</h4>
+                        <div class="text-3xl font-bold mb-2 text-blue-600">200€ <span class="text-sm text-gray-400">(soit 100€ net)</span></div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-2xl scale-105 border-2 border-blue-400">
+                        <h4 class="font-bold text-xl mb-2">Objectif Bac</h4>
+                        <div class="text-3xl font-bold mb-2 text-blue-600">300€ <span class="text-sm text-gray-400">(soit 150€ net)</span></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Espace Élèves -->
+        <section id="eleves" class="py-16 container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-4">Espace Élèves</h2>
+            <p class="text-gray-600 mb-8">Accédez aux fiches de révisions, exercices et corrigés personnalisés.</p>
+            <div class="max-w-md mx-auto bg-white p-6 border rounded-lg shadow-sm">
+                <p class="text-sm text-gray-400 mb-4 italic">Réservé aux inscrits TOPSCOL'AIR</p>
+                <!-- Replace TON_LIEN_GOOGLE_DRIVE with your folder link -->
+                <a href="https://drive.google.com/drive/u/0/folders/TON_LIEN_GOOGLE_DRIVE" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold underline hover:text-blue-800">
+                    Accéder au dossier de ressources
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact / Inscription -->
+        <section id="contact" class="py-20 bg-gray-50 border-t">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-10">Prêt pour le décollage ?</h2>
+                <div class="flex flex-col items-center gap-6">
+                    <p class="text-lg">Contactez-moi pour un premier échange gratuit sur les besoins de votre enfant.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <!-- Verify the phone number format to include country code correctly (e.g. 336...) -->
+                        <a href="https://wa.me/330601103249" class="bg-green-500 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-green-600 transition flex items-center" aria-label="Messagerie WhatsApp">
+                            <i class="fab fa-whatsapp mr-3 text-2xl" aria-hidden="true"></i> Messagerie Parents (WhatsApp)
+                        </a>
+
+                        <!-- Replace TON_FORM_ID with your Google Form id (or full URL) -->
+                        <a href="https://forms.gle/TON_FORM_ID" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-blue-700 transition flex items-center" aria-label="Formulaire d'inscription">
+                            <i class="fas fa-file-signature mr-3" aria-hidden="true"></i> Formulaire d'inscription
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm">
